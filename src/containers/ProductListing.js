@@ -1,11 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import ProductComponent from "./ProductComponent";
 
-const productListing = () => {
+const ProductListing = () => {
+  const products = useSelector((state) => state);
+  console.log(products);
   return (
-    <div>
-      <h1>ProductListing</h1>
+    <div className="ui grid container" style={{ color: "red" }}>
+      <ProductComponent />
     </div>
   );
 };
 
-export default productListing;
+export default ProductListing;

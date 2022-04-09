@@ -9,8 +9,9 @@ function App() {
     <div className="App">
       <Router>
         <Header />
+
         <Routes>
-          <Route path="/" exact component={ProductListing} />
+          <Route path="/" exact element={<ProductListing />} />
           <Route path="/product/:productId" exact component={ProductDetail} />
           <Route>404 Not Found</Route>
         </Routes>
